@@ -4,9 +4,7 @@ module.exports = function(){
             .pipe($.gulpPlugins.plumber())
             .pipe($.gulpPlugins.sourcemaps.init())
             .pipe($.gulpPlugins.sass())
-            .pipe($.gulpPlugins.autoprefixer({
-                browsers: ['last 2 versions']
-            }))
+            .pipe($.gulpPlugins.autoprefixer())
             .pipe($.gulpPlugins.csso())
             .pipe($.gulpPlugins.rename('style.min.css'))
             .pipe($.gulpPlugins.sourcemaps.write(''))

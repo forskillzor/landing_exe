@@ -13,6 +13,6 @@ module.exports = function(){
             .pipe($.gulpPlugins.rename('bundle.min.js'))
             .pipe($.gulpPlugins.sourcemaps.write(''))
             .pipe($.gulp.dest('build/js'))
-            .pipe($.gulp.browserSync.stream());
+            .pipe($.browserSync.stream());
     });
 };
