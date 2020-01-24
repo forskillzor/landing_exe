@@ -1,11 +1,10 @@
 module.exports = function(){
     $.gulp.task('assets', function(){
         return $.gulp.src([
-            'fonts/**/*.{woff,woff2}',
-            'img/**',
-            '*.html'
+            'src/assets/fonts/**/*.{woff,woff2}',
+            'src/assets/img/**',
         ],{
-            base: '.'
+            base: './src'
         })
             .pipe($.gulp.dest('build'));
     });
