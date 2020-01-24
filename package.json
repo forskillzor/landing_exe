@@ -1,0 +1,16 @@
+{
+  "name": "land_exe",
+  "version": "1.0.0",
+  "description": "simple landing page ",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "landing",
+    "gulp",
+    "scss"
+  ],
+  "author": "Sergey Orlov",
+  "license": "ISC"
+}
