@@ -1,16 +1,18 @@
+const jsFiles = [
+    $.path.jquery,
+    $.path.js
+]
 module.exports = function(){
     $.gulp.task('scripts', function(){
-        return $.gulp.src('src/scss/style.scss')
+        return $.gulp.src(jsFiles)
             .pipe($.gulpPlugins.plumber())
             .pipe($.gulpPlugins.sourcemaps.init())
-            .pipe($.gulpPlugins.sass())
-            .pipe($.gulpPlugins.autoprefixer({
-                browsers: ['last 2 versions']
-            }))
-            .pipe($.gulpPlugins.csso())
-            .pipe($.gulpPlugins.rename('style.min.css'))
+            .pipe($.gulpPlugins.babel({presets: ['@babel/preset-env']}))
+            .pipe($.gulpPlugins.concat('bundle.js'))
+            .pipe($.gulpPlugins.uglify())
+            .pipe($.gulpPlugins.rename('bundle.min.js'))
             .pipe($.gulpPlugins.sourcemaps.write(''))
-            .pipe($.gulp.dest('build/css'))
+            .pipe($.gulp.dest('build/js'))
             .pipe($.gulp.browserSync.stream());
     });
 };
