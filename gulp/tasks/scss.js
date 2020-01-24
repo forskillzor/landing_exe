@@ -11,6 +11,6 @@ module.exports = function(){
             .pipe($.gulpPlugins.rename('style.min.css'))
             .pipe($.gulpPlugins.sourcemaps.write(''))
             .pipe($.gulp.dest('build/css'))
-            .pipe($.gulp.browserSync.stream());
+            .pipe($.browserSync.stream());
     });
 };
