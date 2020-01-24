@@ -1,5 +1,5 @@
 module.exports = function(){
-    $.gulp.task('scss', function(){
+    $.gulp.task('scripts', function(){
         return $.gulp.src('src/scss/style.scss')
             .pipe($.gulpPlugins.plumber())
             .pipe($.gulpPlugins.sourcemaps.init())
