@@ -5,13 +5,13 @@ const jsFiles = [
 module.exports = function(){
     $.gulp.task('scripts', function(){
         return $.gulp.src(jsFiles)
-            .pipe($.gulpPlugins.plumber())
-            .pipe($.gulpPlugins.sourcemaps.init())
-            .pipe($.gulpPlugins.babel({presets: ['@babel/preset-env']}))
-            .pipe($.gulpPlugins.concat('bundle.js'))
-            .pipe($.gulpPlugins.uglify())
-            .pipe($.gulpPlugins.rename('bundle.min.js'))
-            .pipe($.gulpPlugins.sourcemaps.write(''))
+            .pipe($.plugins.plumber())
+            .pipe($.plugins.sourcemaps.init())
+            .pipe($.plugins.babel({presets: ['@babel/preset-env']}))
+            .pipe($.plugins.concat('bundle.js'))
+            .pipe($.plugins.uglify())
+            .pipe($.plugins.rename('bundle.min.js'))
+            .pipe($.plugins.sourcemaps.write(''))
             .pipe($.gulp.dest('build/js'))
             .pipe($.browserSync.stream());
     });

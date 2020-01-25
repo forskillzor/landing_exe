@@ -1,12 +1,12 @@
 module.exports = function () {
     $.gulp.task('svg', function () {
-        return $.gulp.src('img/**/*.svg')
-            .pipe($.gulpPlugins.svgmin({
+        return $.gulp.src('src/assets/img/**/*.svg')
+            .pipe($.plugins.svgmin({
                 js2svg:{
                     pretty: true
                 }
             }))
-            .pipe($.gulpPlugins.cheerio({
+            .pipe($.plugins.cheerio({
                 run: function ($) {
                     $('[fill]').removeAttr('fill');
                     $('[stroke]').removeAttr('stroke');
@@ -14,9 +14,9 @@ module.exports = function () {
                 },
                 parseOptions: {xmlMode: true}
             }))
-            .pipe($.gulpPlugins.replace('&gt;', '>'))
+            .pipe($.plugins.replace('&gt;', '>'))
             // build svg sprite
-            .pipe($.gulpPlugins.svgSprite({
+            .pipe($.plugins.svgSprite({
                 mode: {
                     symbol: {
                         sprite: 'sprite.svg'
