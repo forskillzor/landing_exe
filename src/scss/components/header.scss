@@ -1,0 +1,29 @@
+.header{
+  height: 156px;
+  background-color: $gray-bg;
+  border-bottom: 4px solid $red;
+
+  .header__logo{
+    img{
+      width: 100px;
+      height: 40px;
+    }
+    //margin-right: 40px;
+  }
+}
+.header__wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 10px;
+}
+
+@media (max-width: 768px){
+  .header__wrap{
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+  .header__logo{
+    padding-bottom: 30px;
+  }
+}
