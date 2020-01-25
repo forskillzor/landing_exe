@@ -41,5 +41,8 @@
   },
   "browserslist": [
     "last 2 versions"
-  ]
+  ],
+  "dependencies": {
+    "normalize.scss": "^0.1.0"
+  }
 }
