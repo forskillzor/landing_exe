@@ -22,12 +22,13 @@
   display: inline-block;
   color: $white;
   font-size: 80px;
-  line-height: 50px;
+  line-height: 80px;
   font-weight: 800;
   margin: 0;
 }
 
 .banner__desc{
+  display: block;
   color: white;
   font-size: 43px;
   line-height: 40px;
@@ -47,14 +48,80 @@
   margin-top: 15px;
 }
 .buttons__wrapper{
+  display: flex;
   margin-top: 40px;
 }
 
 .banner__button--red{
-  background-color: $red;
+  @include button($red);
 }
-.banner__button--transparent{
-  background-color: transparent;
-  border: 2px solid $white;
+.banner__button--gray{
+  @include button($gray-bg, $white){
+    margin-right:0;
+  };
+}
+
+@media (max-width: 1200px){
+  .banner__wrap{
+    display: flex;
+  }
+
+  .banner__capture{
+    margin-left: 40px;
+    max-width: 570px;
+  }
+}
+
+@media (max-width: 768px){
+  .banner{
+    background-image: none;
+    height: auto;
+
+    &__capture{
+      max-width: 720px;
+    }
+  }
+
+  .banner__capture{
+    text-align: center;
+    margin: 40px auto;
+  }
+
+  .buttons__wrapper{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 648px){
+  .banner{
+    &__capture{
+      max-width: 430px;
+    }
+    &__title{
+      font-size: 60px;
+      line-height: 60px;
+    }
+    &__desc{
+      font-size: 32px;
+    }
+    &__small{
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .banner{
+    &__capture{}
+    &__button--red{
+      margin-right:0;
+      margin-bottom: 20px;
+    }
+  }
+  .buttons__wrapper{
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
 
