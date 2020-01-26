@@ -37,10 +37,18 @@
     & .edges__subtitle{
       color: $red;
     }
+    & .edges__text{
+      color: $white;
+    }
     &::after{
       opacity: 1;
     }
   }
+}
+
+.edges__text{
+  transition-duration: 200ms;
+  transition-property: color;
 }
 
 .edges__img{
