@@ -1,0 +1,24 @@
+.edges__title{
+  @include visually-hidden;
+}
+
+.edges__list{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+  grid-column-gap: 30px;
+}
+
+.edges__item{
+  margin: 15px 0;
+}
+
+.edges__img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 104px;
+  height: 104px;
+  border: 1px solid $gray-text;
+  border-radius: 50%;
+}
