@@ -5,16 +5,11 @@ $bg: #202020;
 }
 
 .works__list{
-  //padding-top: 80px;
-  //padding-bottom: 160px;
-  //padding-left: 0;
-  //padding-right: 0;
-
   padding: 80px 0 160px 0;
 
   display: grid;
   list-style: none;
-  grid-template-columns: repeat(12, minmax(97.3px, auto));
+  grid-template-columns: repeat(12, minmax(30px,97px));
   grid-auto-rows: minmax(270px, auto);
 }
 
@@ -25,8 +20,10 @@ $bg: #202020;
 
 .works__item{
   position: relative;
+  overflow: hidden;
 
   img{
+    object-fit: cover;
     position: absolute;
     z-index: 0;
     width: 100%;
@@ -36,6 +33,7 @@ $bg: #202020;
 
 .works__title{
   margin-top: 30px;
+  padding-left: 10px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 30px;
@@ -52,6 +50,7 @@ $bg: #202020;
   font-size: 14px;
   color: $gray-text;
   padding-right: 33px;
+  padding-left: 10px;
 }
 
 .works__info {
@@ -126,11 +125,40 @@ $bg: #202020;
   transition-property: background-color;
   outline: none;
 
+  &.active{
+    background-color: $red;
+  }
   &:hover{
     background-color: $red;
   }
   & svg{
   fill: $white;
   }
+}
+
+@media(max-width: 980px){
+  .works__list{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .col-3{ grid-column: span 1; }
+  .col-4{ grid-column: span 1; }
+  .col-5{ grid-column: span 1; }
+  .col-6{ grid-column: span 1; }
+}
+
+@media(max-width: 768px) {
+  .works__item:first-child{
+    grid-column: 1 / -1;
+  }
+}
+
+@media(max-width: 480px){
+  .works__list{
+    grid-template-columns: 1fr;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
 }
 
