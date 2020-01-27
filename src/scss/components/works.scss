@@ -1,0 +1,136 @@
+$bg: #202020;
+
+.works{
+  background-color: $bg;
+}
+
+.works__list{
+  //padding-top: 80px;
+  //padding-bottom: 160px;
+  //padding-left: 0;
+  //padding-right: 0;
+
+  padding: 80px 0 160px 0;
+
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(12, minmax(97.3px, auto));
+  grid-auto-rows: minmax(270px, auto);
+}
+
+.col-3{ grid-column: span 3; }
+.col-4{ grid-column: span 4; }
+.col-5{ grid-column: span 5; }
+.col-6{ grid-column: span 6; }
+
+.works__item{
+  position: relative;
+
+  img{
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.works__title{
+  margin-top: 30px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: $white-text;
+
+  span{
+    display: block;
+  }
+}
+
+.works__text{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: $gray-text;
+  padding-right: 33px;
+}
+
+.works__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  opacity: 0;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 5px solid $red;
+  transition-property: opacity;
+  transition-duration: 500ms;
+
+  &:hover{
+    opacity: 1;
+  }
+  &.active{
+    opacity: 1;
+  }
+}
+
+.works__info-title{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: $white-text;
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+
+.works__info-text{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: $gray-text;
+  text-transform: uppercase;
+  padding-left: 20px;
+
+  &::after{
+    display: block;
+    margin-top: 25px;
+    content: "";
+    width:70px;
+    height: 2px;
+    background-color: $red;
+  }
+}
+
+.works__buttons-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+  padding-right: 40px;
+}
+
+.works__button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 0;
+  margin-left: 10px;
+  background-color: $gray-bg;
+  transition-duration: 500ms;
+  transition-property: background-color;
+  outline: none;
+
+  &:hover{
+    background-color: $red;
+  }
+  & svg{
+  fill: $white;
+  }
+}
+
