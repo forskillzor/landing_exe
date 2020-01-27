@@ -1,0 +1,37 @@
+.responsive__info{
+  .list__item{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: $gray-text;
+    margin-bottom: 20px;
+
+    &::before{
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 2px;
+      margin-bottom: 4px;
+      margin-right: 20px;
+      margin-left: 20px;
+      background-color: $red;
+    }
+  }
+
+  .list{
+    list-style: none;
+    padding: 0;
+  }
+}
+.responsive__title{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: $white;
+}
+
+.responsive__text{
+  font-family: 'Ronoto', sans-serif;
+  font-size: 14px;
+  color: $dark-gray-text;
+}
+
