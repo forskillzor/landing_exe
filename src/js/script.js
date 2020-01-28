@@ -9,15 +9,23 @@ $(document).ready(function(){
         $(this).removeClass('active');
     });
 
+    let progressDone = false;
+
     function moveProgressBar(node, nodeLine, tooltip, animationLength = 1500){
         const progressElement = $(node);
-        progressElement.each(function (value, item) {
+        progressElement.each(function (index, item) {
             $(item).find(nodeLine).animate({
                 width: item.dataset.progress+'%'
-            }, animationLength);
+            }, animationLength).find(tooltip).css('opacity', 1);
             $(item).find(tooltip).show(animationLength);
         });
     }
+    $(window).scroll(function(){
+        if (!progressDone && $('.skills').offset().top <= $(window).scrollTop()){
+            moveProgressBar('.progress__bar', '.progress__line', '.progress__tooltip');
+            progressDone = true;
+        }
+    });
 
-    moveProgressBar('.progress__bar', '.progress__line', '.progress__tooltip');
 });
+
