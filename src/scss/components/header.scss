@@ -3,13 +3,12 @@
   background-color: $gray-bg;
   border-bottom: 4px solid $red;
 
-  .header__logo{
-    img{
+  .header__logo--img{
       width: 100px;
       height: 40px;
-    }
   }
 }
+
 .header__wrap{
   display: flex;
   justify-content: space-between;
