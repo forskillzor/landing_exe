@@ -1,0 +1,22 @@
+.list .list__item{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: $gray-text;
+  margin-bottom: 20px;
+
+  &::before{
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 2px;
+    margin-bottom: 4px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: $red;
+  }
+}
+
+.list{
+  list-style: none;
+  padding: 0;
+}

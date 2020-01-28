@@ -1,0 +1,43 @@
+.skills{
+  background-color: $red;
+}
+.skills__wrap{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.skills__info{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  max-width: 280px;
+}
+
+.skills__title{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: $white-text;
+  text-transform: uppercase;
+
+  &::before{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 2px;
+    margin-bottom: 25px;
+    background-color: $white-text;
+
+  }
+}
+
+.skills__text{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: $white-text;
+}
+
+.skills__button{
+  @include button($gray-bg);
+  margin-top: 50px;
+}
+

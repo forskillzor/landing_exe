@@ -1,37 +1,62 @@
-.responsive__info{
-  .list__item{
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    color: $gray-text;
-    margin-bottom: 20px;
-
-    &::before{
-      content: "";
-      display: inline-block;
-      width: 8px;
-      height: 2px;
-      margin-bottom: 4px;
-      margin-right: 20px;
-      margin-left: 20px;
-      background-color: $red;
-    }
-  }
-
-  .list{
-    list-style: none;
-    padding: 0;
-  }
+.responsive__wrap{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding:0;
 }
+.responsive__moc{
+  margin-top:100px;
+  overflow: hidden;
+  background-image: url('../img/responsive-bg.webp');
+  background-position: left;
+  background-repeat: no-repeat;
+}
+.responsive__info{
+  grid-column: 2;
+  width: 420px;
+  padding: 100px 20px;
+  box-sizing: border-box;
+}
+
 .responsive__title{
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
+  text-transform: uppercase;
   font-size: 30px;
   color: $white;
+
+  &::before{
+    display: block;
+    content: "";
+    width: 70px;
+    height: 2px;
+    background-color: $dark-gray-text;
+    margin-bottom: 30px;
+  }
 }
 
 .responsive__text{
   font-family: 'Ronoto', sans-serif;
   font-size: 14px;
   color: $dark-gray-text;
+}
+
+.responsive__button{
+  @include button($green);
+  margin-top: 50px;
+}
+
+@media(max-width: 768px){
+  .responsive__moc{
+    display: none;
+  }
+  .responsive__wrap{
+    display: block;
+  }
+  .responsive__info{
+    grid-column: 2;
+    width: 100%;
+    padding: 60px 20px;
+    box-sizing: border-box;
+  }
 }
 
