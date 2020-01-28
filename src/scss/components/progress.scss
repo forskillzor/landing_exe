@@ -56,3 +56,9 @@
   left: 5px;
   bottom: 9px;
 }
+
+@media (max-width: 580px){
+  .progress__list{
+    padding: 20px;
+  }
+}

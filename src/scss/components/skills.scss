@@ -1,6 +1,6 @@
 .skills{
   background-color: $red;
-  margin-bottom: 500px;
+  margin-bottom: 1000px;
 }
 .skills__wrap{
   display: grid;
@@ -10,6 +10,7 @@
 .skills__info{
   padding-top: 80px;
   padding-bottom: 80px;
+  padding-right: 20px;
   max-width: 280px;
 }
 
@@ -44,5 +45,15 @@
 
 .progress__list{
   grid-column: span 2;
+}
+
+@media (max-width: 580px){
+  .skills__wrap{
+    display: flex;
+    flex-direction: column;
+  }
+  .skills__info{
+    padding: 10px;
+  }
 }
 

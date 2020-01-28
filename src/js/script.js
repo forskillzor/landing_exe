@@ -21,7 +21,7 @@ $(document).ready(function(){
         });
     }
     $(window).scroll(function(){
-        if (!progressDone && $('.skills').offset().top <= $(window).scrollTop()){
+        if (!progressDone && $('.skills').offset().top <= $(window).scrollTop() + 200){
             moveProgressBar('.progress__bar', '.progress__line', '.progress__tooltip');
             progressDone = true;
         }
