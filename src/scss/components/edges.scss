@@ -77,3 +77,11 @@
   transition-duration: 200ms;
   transition-property: color;
 }
+
+@media(max-width: 1200px){
+  .edges__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
