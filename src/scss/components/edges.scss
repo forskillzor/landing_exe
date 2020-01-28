@@ -78,10 +78,15 @@
   transition-property: color;
 }
 
-@media(max-width: 1200px){
+@media(max-width: 480px){
   .edges__item{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .edges__text{
+    width: 80%;
   }
 }
