@@ -1,0 +1,58 @@
+.progress__list{
+  list-style: none;
+  margin: 0;
+  padding: 120px 10px;
+}
+
+.progress__item{
+}
+
+.progress__title{
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.progress__border{
+  box-sizing: border-box;
+  height: 10px;
+  position: relative;
+  border: 1px solid $red-light;
+  border-radius: 3px;
+  width: 100%;
+  padding: 2px;
+}
+
+.progress__line{
+  width: 0;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  height: 4px;
+  background-color: $white;
+}
+
+.progress__tooltip{
+  position: absolute;
+  right: -15px;
+  top: -25px;
+}
+
+.tooltip__svg{
+  position: relative;
+  width: 30px;
+  height: 20px;
+}
+
+.tooltip__text{
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  position: absolute;
+  color: $white;
+  left: 5px;
+  bottom: 9px;
+}
+
