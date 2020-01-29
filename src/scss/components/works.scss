@@ -13,10 +13,6 @@ $bg: #202020;
   grid-auto-rows: minmax(270px, auto);
 }
 
-.col-3{ grid-column: span 3; }
-.col-4{ grid-column: span 4; }
-.col-5{ grid-column: span 5; }
-.col-6{ grid-column: span 6; }
 
 .works__item{
   position: relative;
@@ -32,13 +28,22 @@ $bg: #202020;
 }
 
 .works__title{
-  margin-top: 30px;
   padding-left: 10px;
+  margin-top:0;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
   color: $white-text;
+
+  &::before{
+    display: block;
+    content: "";
+    width: 70px;
+    height: 2px;
+    background-color: $dark-gray-text;
+    margin-bottom: 30px;
+  }
 
   span{
     display: block;

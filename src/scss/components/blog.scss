@@ -1,0 +1,142 @@
+.blog__list{
+  display: grid;
+  grid-template-columns: repeat(12, minmax(30px,97px));
+  grid-auto-rows: 130px;
+  list-style: none;
+  padding: 100px 20px;
+}
+
+.blog__title{
+  margin-top: 30px;
+  padding-left: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: $white-text;
+
+  span{
+    display: block;
+  }
+}
+
+.blog__header{
+  padding-left: 20px;
+}
+
+.blog__text{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: $gray-text;
+  padding-right: 33px;
+  padding-left: 10px;
+
+
+}
+
+.blog__item{
+  position: relative;
+  overflow: hidden;
+
+  &:nth-child(5){
+    grid-row: 3 / 6;
+    grid-column: 9/13;
+  }
+  img{
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+    //width: 100%;
+    //height: 100%;
+  }
+}
+
+.blog__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border: 5px solid transparent;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition-property: border-color;
+  transition-duration: 500ms;
+
+  &:hover{
+    border: 5px solid $red;
+
+    & .category-icon{
+      background-color: $red;
+    }
+  }
+  &.active{
+    border: 5px solid $red;
+  }
+
+  .category-icon{
+    position: relative;
+    width: 41px;
+    height: 41px;
+    background-color: black;
+    text-align: center;
+    transition-property: background-color;
+    transition-duration: 500ms;
+    border-radius: 10px;
+
+    svg{
+      fill: $white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.blog__info-title{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: $white-text;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.blog__info-text{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: $gray-text;
+  text-transform: uppercase;
+
+  &::after{
+    display: block;
+    margin-top: 25px;
+    content: "";
+    width:70px;
+    height: 2px;
+    background-color: $red;
+  }
+}
+
+.row5-1{
+  grid-row: span 1;
+}
+.row5-2{
+  grid-row: span 2;
+}
+.row5-3{
+  grid-row: span 3;
+}
+.row5-4{
+  grid-row: span 4;
+}
+.row5-5{
+  grid-row: span 5;
+}
+
+

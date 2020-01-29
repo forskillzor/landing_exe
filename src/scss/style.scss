@@ -5,6 +5,7 @@
 @import './core/fonts';
 @import './core/mixins';
 @import './core/core';
+@import './core/grid';
 
 @import './components/header';
 @import './components/menu';
@@ -15,3 +16,4 @@
 @import './components/list';
 @import './components/skills';
 @import './components/progress';
+@import './components/blog';
