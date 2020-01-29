@@ -1,0 +1,33 @@
+.clients{
+  height: 476px;
+  background-color:$dark-bg;
+}
+
+.clients__wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+}
+
+.clients__header{
+  text-align: center;
+  max-width: 560px;
+  margin-bottom: 30px;
+}
+
+.clients__title{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.slider{
+  width: 100%;
+  height: 100px;
+  background-color: $gray-bg;
+}
+
