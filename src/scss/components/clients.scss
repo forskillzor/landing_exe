@@ -43,6 +43,10 @@
   color: $dark-gray-text;
 }
 
-.owl-carousel{
+.clients__carousel{}
+.carousel__item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
-
